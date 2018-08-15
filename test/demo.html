@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Easy Binder</title>
+</head>
+
+<body>
+    
+    <input type="button" value="Send">
+
+    <input bind="account.username" type="text" name="mytext" value="default text">
+
+    <textarea  bind="account.profile.desc" name="textarea"></textarea>
+
+    <input bind="account.password" type="password" name="pass" value="">
+    <input bind type="hidden" value="code">
+    <input bind="account.profile.loggedIn" type="checkbox" name="loggedIn" value="true">
+
+    <input bind="account.profile.gender" type="radio" name="gender" value="male" checked> Male 
+    <input type="radio" name="gender" value="female"> Female
+
+    <select name="select">
+    <option>cherry</option>
+    <option>orange</option>
+    <option>apple</option>
+    </select>
+
+
+    <input type="file" name="file">
+
+    <input type="image" name="image" src="xulfr.gif">
+
+    <input type="submit" value="Submit">
+
+    <span bind="account.profile.status">I am span</span>
+    <div bind="account.profile.info">I am div</div>
+    <a bind="account.profile.logout">I am anchor</a>
+
+    <!-- libs -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
+    <script src="../easy-model-binder.js"></script>
+    <script src="./main.js"></script>
+</body>
+</html>
